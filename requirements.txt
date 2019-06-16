@@ -1,0 +1,8 @@
+jupyter
+nltk
+spacy
+scikit-learn
+matplotlib
+unidecode
+pandas
+xmltodict

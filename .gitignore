@@ -1,0 +1,6 @@
+/data/
+/models/
+.DS_Store
+.ipynb_checkpoints
+notebooks/.ipynb_checkpoints
+notebooks/Prova26.05.19.ipynb
