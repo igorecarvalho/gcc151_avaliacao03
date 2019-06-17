@@ -16,7 +16,7 @@ Este repositório contêm a solução para a prova 3 da disciplina de GCC151-PLN
 
 
 # Para executar:
-- ```git clone https://github.com/igorecarvalho/gcc151_avaliacao02```
+- ```git clone https://github.com/igorecarvalho/gcc151_avaliacao03```
 - entre no diretório do repositório.
 - cria a pasta models
 - baixar a biblioteca da língua portguesa do spacy através do comando ```python -m spacy download pt_core_news_sm``` e salvar na pasta models.
