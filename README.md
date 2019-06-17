@@ -25,6 +25,6 @@ Este repositório contêm a solução para a prova 3 da disciplina de GCC151-PLN
 - execute o comando: ```jupyter notebook```.
 
 ## Download do corpora
-- criar o diretório data/dataset
+- criar o diretório ```data/trainse```
 - baixar o corpus no link ```https://drive.google.com/open?id=1mxU_rCKRoRUcOH1GrSho8hqtAmJbNIqm``` pois os alguns arquivos .xml estavam com erros de edição nas tags impedindo a leitura correta dos arquivos.
 - salvar os corpus dentro do diretório criado.
