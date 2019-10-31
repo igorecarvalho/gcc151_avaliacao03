@@ -1,30 +1,31 @@
-# Avaliação 3 de PLN 16.06.19
-Este repositório contêm a solução para a prova 3 da disciplina de GCC151-PLN.
+# Valida CPF
 
-## O grupo:
-- Igor Carvalho: https://github.com/igorecarvalho
-- Franciscone Luiz: https://github.com/franciscone14
-- Victor Hugo Landin: https://github.com/vhal9
+Para executar a API:
 
-## O problema esta descrito no arquivo pdf.
-- Arquivo Notebook/Prova3.ipynb realiza o estudados dos dados.
-- Arquivo Prova3-PLN.pdf contém o relatório de desenvolvimento da avaliação.
+`$ git clone https://gitlab.com/gcc129/valida-cpf.git`
 
-- As biblioteca que contêm rotinas de normatização estão contidas em:
-- - notebook/nlputils/lexical/preprocessing.py
-- - notebook/nlputils/syntax/preprocessing.py
-- - notebook/nlputils/morphosyntax/preprocessing.py
-- - notebook/nlputils/semantics/preprocessing.py
+`$ cd valida-cpf`
 
-# Para executar:
-- ```git clone https://github.com/igorecarvalho/gcc151_avaliacao03```
-- entre no diretório do repositório.
-- crie o diretório models
-- baixe a biblioteca da língua portguesa do spacy através do comando ```python -m spacy download pt_core_news_sm``` e salve na pasta models.
-- instale as bibliotecas do python com o comando: ```pip3 install -r requirements.txt```
-- execute o comando: ```jupyter notebook```.
+`$ npm install`
 
-## Download do corpora
-- criar o diretório ```data/trainset```
-- baixar o corpus no link ```https://drive.google.com/open?id=1mxU_rCKRoRUcOH1GrSho8hqtAmJbNIqm``` pois os alguns arquivos .xml estavam com erros de edição nas tags impedindo a leitura correta dos arquivos.
-- salvar os corpus dentro do diretório criado.
+`$ npm start`
+
+Para testar em localhost:
+
+`$ curl localhost:5000/`
+
+`$ curl localhost:5000/validar/12345678900`
+
+# Trabalho
+- ...criando a imagem
+`docker build -t nodeserver:001 .`
+
+- ...criando os container a partir das imagens criadas
+`docker container run -p 5001:5000 --name customized1 -e "name=container001" -d nodeserver:001`
+`docker container run -p 5002:5000 --name customized2 -e "name=container002" -d nodeserver:001`
+`docker container run -p 5003:5000 --name customized3 -e "name=container003" -d nodeserver:001`
+
+- ...criando balanceamento de carga
+`cd balance`
+`docker build -t nginxbalancer:001 .`
+`docker container run -p 5000:80 -d nginxbalancer:001`
